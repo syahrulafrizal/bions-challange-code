@@ -141,11 +141,13 @@ class MarketChartView extends GetView<MarketChartController> {
                     showTitles: true,
                     interval: 6000,
                     getTitlesWidget: (value, meta) {
-                      DateTime date = DateTime.fromMillisecondsSinceEpoch(value.toInt());
+                      DateTime date = DateTime.fromMillisecondsSinceEpoch(
+                        value.toInt(),
+                      );
                       String text = DateFormat(
                         (date.second == 0 || value == meta.min)
                             ? "HH:mm"
-                            : (date.second > 15 && value == meta.max)
+                            : (date.second >= 10 && value == meta.max)
                                 ? "ss"
                                 : "",
                       ).format(date);
@@ -165,7 +167,6 @@ class MarketChartView extends GetView<MarketChartController> {
                   sideTitles: SideTitles(
                     showTitles: true,
                     reservedSize: 60,
-                    // interval: 5,
                     getTitlesWidget: (value, meta) {
                       return Text(
                         NumberFormat("#,###", "en_US").format(value),
@@ -199,6 +200,7 @@ class MarketChartView extends GetView<MarketChartController> {
                     getDotPainter: (p0, p1, p2, p3) {
                       return FlDotCirclePainter(
                         color: Colors.blue,
+                        strokeColor: Colors.blue,
                         strokeWidth: 1,
                         radius: 4,
                       );

@@ -10,7 +10,9 @@ import 'package:web_socket_channel/web_socket_channel.dart';
 
 class WatchlishtController extends GetxController {
   RxList<Crypto> watchlist = <Crypto>[].obs;
-  final wsUrl = Uri.parse('wss://ws.eodhistoricaldata.com/ws/crypto?api_token=demo');
+  final wsUrl = Uri.parse(
+    'wss://ws.eodhistoricaldata.com/ws/crypto?api_token=demo',
+  );
   late WebSocketChannel channel;
   RxBool isLoaded = true.obs;
 
@@ -74,7 +76,9 @@ class WatchlishtController extends GetxController {
     channel.stream.listen((message) {
       Crypto crypto = cryptoFromJson(message);
 
-      int index = watchlist.indexWhere((element) => element.s == crypto.s);
+      int index = watchlist.indexWhere(
+        (element) => element.s == crypto.s,
+      );
 
       if (index != -1) {
         Crypto watchlistCrypto = watchlist[index];
@@ -83,8 +87,7 @@ class WatchlishtController extends GetxController {
           watchlist[index].chart!.removeRange(0, 120);
         }
 
-        if ((watchlistCrypto.updatedAt == null && crypto.p != null) ||
-            (crypto.updatedAt?.second != watchlistCrypto.updatedAt?.second)) {
+        if (crypto.updatedAt?.second != watchlistCrypto.updatedAt?.second) {
           watchlist[index] = crypto;
           watchlist[index].icon = watchlistCrypto.icon;
 

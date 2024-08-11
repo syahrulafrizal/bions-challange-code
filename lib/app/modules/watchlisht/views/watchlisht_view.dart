@@ -57,7 +57,9 @@ class WatchlishtView extends GetView<WatchlishtController> {
                 ),
                 title: Text(
                   crypto.s ?? "-",
-                  style: const TextStyle(fontWeight: FontWeight.bold),
+                  style: const TextStyle(
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
                 subtitle: Text(
                   NumberFormat("#,###.#", "en_US").format(crypto.dd ?? 0),
