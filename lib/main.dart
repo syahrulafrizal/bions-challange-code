@@ -9,8 +9,17 @@ Future<void> main() async {
 
   runApp(
     GetMaterialApp(
-      title: "Application",
+      title: "BIONS CHALLANGE CODE",
       initialRoute: AppPages.INITIAL,
+      color: Colors.orange,
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.orange,
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.orange,
+        ),
+        scaffoldBackgroundColor: Colors.grey[200],
+      ),
       getPages: AppPages.routes,
     ),
   );

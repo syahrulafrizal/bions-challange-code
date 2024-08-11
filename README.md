@@ -1,7 +1,3 @@
-# bionschallange
-
-A new Flutter project.
-
 ## Getting Started
 
 This project is a starting point for a Flutter application.
@@ -15,6 +11,46 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
+## Installation
+
+Get code using
+
+```
+git clone https://github.com/baguilar6174/flutter-crypto-app.git
+```
+
+__Step 2__
+
+Install the necessary libraries (this proyect use Flutter 3.22.3 & Dart >=3.4.4 <4.0.0)
+
+```
+flutter pub get
+```
+
+__Step 3__
+
+Run the app
+
+```bash
+flutter run
+```
+
 ## Requirement 🛠 :
-- minimal flutter version : 3.22.3
-# bions-challange-code
+- flutter version : 3.22.3
+- sdk : >=3.4.4 <4.0.0
+
+## StakBuild with (libs) 🛠 :
+- `get_x`: State Management
+- `web_socket_channel`: Allow connections with WS
+- `intl`: Internationalization
+- `fl_chart`: Market chart
+
+## Bions Challange Code
+
+<table>
+  <tr>
+    <td align="center" valign="center"><img src="screenshoot/watchlist.png" width="25%"></td>
+    <td align="center" valign="center"><img src="screenshoot/chart.png" width="25%"></td>
+  </tr>
+ </table>
+

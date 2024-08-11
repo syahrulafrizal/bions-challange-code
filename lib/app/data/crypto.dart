@@ -1,41 +1,51 @@
 import 'dart:convert';
 
+import 'package:fl_chart/fl_chart.dart';
+
 Crypto cryptoFromJson(String str) => Crypto.fromJson(json.decode(str));
 
-String cryptoToJson(Crypto data) => json.encode(data.toJson());
-
 class Crypto {
+  String? icon;
   String? s;
-  String? p;
-  String? q;
-  String? dc;
-  String? dd;
+  num? p;
+  num? q;
+  num? dc;
+  num? dd;
   int? t;
-  DateTime? dateTime;
+  double? maxY;
+  double? minY;
+  DateTime? updatedAt;
+  List<FlSpot>? chart;
 
-  Crypto({this.s, this.p, this.q, this.dc, this.dd, this.t, this.dateTime});
+  Crypto({
+    this.s,
+    this.icon,
+    this.p,
+    this.q,
+    this.dc,
+    this.dd,
+    this.t,
+    this.updatedAt,
+    this.chart,
+    this.maxY,
+    this.minY,
+  });
 
   factory Crypto.fromJson(Map<String, dynamic> json) => Crypto(
         s: json["s"],
-        p: json["p"],
-        q: json["q"],
-        dc: json["dc"],
-        dd: json["dd"],
+        icon: json["icon"],
+        p: num.tryParse(json["p"] ?? "0"),
+        q: num.tryParse(json["q"] ?? "0"),
+        dc: num.tryParse(json["dc"] ?? "0"),
+        dd: num.tryParse(json["dd"] ?? "0"),
         t: json["t"],
-        dateTime: json["t"] == null
+        maxY: json["maxY"] ?? 0,
+        minY: json["minY"] ?? 0,
+        chart: json["chart"] ?? [],
+        updatedAt: json["t"] == null
             ? null
             : DateTime.fromMillisecondsSinceEpoch(
                 json["t"],
               ),
       );
-
-  Map<String, dynamic> toJson() => {
-        "s": s,
-        "p": p,
-        "q": q,
-        "dc": dc,
-        "dd": dd,
-        "t": t,
-        "dateTime": dateTime,
-      };
 }
