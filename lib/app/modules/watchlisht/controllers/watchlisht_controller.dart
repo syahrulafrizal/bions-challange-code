@@ -91,7 +91,7 @@ class WatchlishtController extends GetxController {
           List<FlSpot> curent = watchlistCrypto.chart ?? [];
 
           FlSpot chartPoint = FlSpot(
-            ((crypto.t ?? 0) - ((crypto.t ?? 0) % 100)).toDouble(),
+            ((crypto.t ?? 0) - ((crypto.t ?? 0) % 1000)).toDouble(),
             (crypto.p ?? 0).toDouble(),
           );
           watchlistCrypto.chart?.add(chartPoint);
