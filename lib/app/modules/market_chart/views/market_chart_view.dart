@@ -82,9 +82,9 @@ class MarketChartView extends GetView<MarketChartController> {
         body: Container(
           margin: EdgeInsets.only(
             top: 16,
-            left: MediaQuery.of(context).viewPadding.left,
-            bottom: MediaQuery.of(context).viewPadding.bottom,
-            right: 32,
+            left: MediaQuery.of(context).viewPadding.left + 16,
+            bottom: MediaQuery.of(context).viewPadding.bottom + 16,
+            right: 16,
           ),
           child: LineChart(
             LineChartData(
@@ -165,7 +165,7 @@ class MarketChartView extends GetView<MarketChartController> {
                   sideTitles: SideTitles(
                     showTitles: true,
                     reservedSize: 60,
-                    interval: 5,
+                    // interval: 5,
                     getTitlesWidget: (value, meta) {
                       return Text(
                         NumberFormat("#,###", "en_US").format(value),

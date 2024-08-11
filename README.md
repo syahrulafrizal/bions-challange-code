@@ -16,7 +16,7 @@ samples, guidance on mobile development, and a full API reference.
 Get code using
 
 ```
-git clone https://github.com/baguilar6174/flutter-crypto-app.git
+git clone https://github.com/syahrulafrizal/bions-challange-code.git
 ```
 
 __Step 2__
@@ -50,6 +50,8 @@ flutter run
 <table>
   <tr>
     <td align="center" valign="center"><img src="screenshoot/watchlist.png" width="25%"></td>
+  </tr>
+  <tr>
     <td align="center" valign="center"><img src="screenshoot/chart.png" width="25%"></td>
   </tr>
  </table>

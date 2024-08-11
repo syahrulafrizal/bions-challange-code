@@ -14,7 +14,7 @@ class MarketChartController extends GetxController {
     WidgetsFlutterBinding.ensureInitialized();
 
     SystemChrome.setPreferredOrientations([
-      DeviceOrientation.landscapeRight,
+      DeviceOrientation.landscapeLeft,
     ]);
   }
 

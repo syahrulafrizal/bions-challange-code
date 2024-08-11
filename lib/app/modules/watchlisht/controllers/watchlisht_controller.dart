@@ -114,8 +114,6 @@ class WatchlishtController extends GetxController {
           watchlist[index].maxY = maxY;
           watchlist[index].minY = minY;
 
-          watchlist.refresh();
-
           isLoaded.value = false;
         }
       }
