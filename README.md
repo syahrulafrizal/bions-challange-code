@@ -49,10 +49,10 @@ flutter run
 
 <table>
   <tr>
-    <td align="center" valign="center"><img src="screenshoot/watchlist.png" width="25%"></td>
+    <td align="center" valign="center"><img src="screenshoot/watchlist.png"></td>
   </tr>
   <tr>
-    <td align="center" valign="center"><img src="screenshoot/chart.png" width="25%"></td>
+    <td align="center" valign="center"><img src="screenshoot/chart.png"></td>
   </tr>
  </table>
 
